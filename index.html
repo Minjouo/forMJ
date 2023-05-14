@@ -1,0 +1,698 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Minju Kwon</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="efe82c69-c369-484e-8c6c-eb277343a37b" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/KakaoTalk_Photo_2023-03-21-23-21-55.png"/></div><h1 class="page-title">Minju Kwon</h1></header><div class="page-body"><p id="76ce0af9-6045-4c6a-a68a-7909e5a831f3" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bc82e0aa-6beb-4ee2-a556-5048c2fcdf97"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">안녕하세요.<p id="d2ed95ae-cd0d-41ae-8b16-0ece12463109" class="block-color-gray_background">UX디자이너 권민주입니다.</p><p id="9ddbeb13-f41b-4d52-88e4-e302c26e8f77" class="">학부때부터 인간공학, UX를 공부하였고, 대학원에서 HCI, UX를 공부했습니다. </p><p id="95c1c97d-d75e-43ab-b125-e5b727dba876" class="">데이터기반의 근거있는 리서처이자 UX디자이너로, 스마트 가전 제품과 인터페이스에서 꾸준한 고객 경험을 만들고자 하는 목표를 가지고 있습니다.</p><p id="50362770-847e-482f-9c8e-6f66021b5c39" class="">잘 부탁드리겠습니다. 감사합니다 : )</p></div></figure><h1 id="9e843353-3e5f-4101-a377-21eb39cb8278" class="">🖌 포트폴리오  </h1><figure id="82894ef9-39a1-4f1d-b09e-a409ff238f05"><div class="source"><a href="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/UX%25E1%2584%2591%25E1%2585%25A9%25E1%2584%2590%25E1%2585%25B3%25E1%2584%2591%25E1%2585%25A9%25E1%2586%25AF%25E1%2584%2585%25E1%2585%25B5%25E1%2584%258B%25E1%2585%25A9_%25E1%2584%2580%25E1%2585%25AF%25E1%2586%25AB%25E1%2584%2586%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%258C%25E1%2585%25AE.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5300a9ef-860a-4332-8657-1665815eb864/UX%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9_%E1%84%80%E1%85%AF%E1%86%AB%E1%84%86%E1%85%B5%E1%86%AB%E1%84%8C%E1%85%AE.pdf</a></div></figure><p id="7621e6f0-d820-41fe-9b0d-cfbff58da7a4" class="">
+</p><hr id="126822e7-2f74-4591-aa2e-78ca3584b996"/><div id="f8f5f4ac-317b-41fd-8c30-95e7c8485e12" class="column-list"><div id="530f1604-b8d9-461c-bf38-bac335d414ce" style="width:33.33333333333333%" class="column"><figure id="d7c27f4b-5db6-43cb-9ccf-84b5bc4eb0e1" class="image"><a href="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/%25E1%2584%2580%25E1%2585%25AF%25E1%2586%25AB%25E1%2584%2586%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%258C%25E1%2585%25AE_%25E1%2584%258E%25E1%2585%25B1%25E1%2584%258B%25E1%2585%25A5%25E1%2586%25B8-_(1)_(1).jpg"><img style="width:3342px" src="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/%25E1%2584%2580%25E1%2585%25AF%25E1%2586%25AB%25E1%2584%2586%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%258C%25E1%2585%25AE_%25E1%2584%258E%25E1%2585%25B1%25E1%2584%258B%25E1%2585%25A5%25E1%2586%25B8-_(1)_(1).jpg"/></a></figure><p id="1484d207-f709-4083-9c1c-1a0df37e8f5a" class="">
+</p></div><div id="f93c8c84-b09a-4b5c-8467-553f57776482" style="width:33.33333333333333%" class="column"><p id="6b7739f4-b3eb-4b74-885a-de337f1cb72c" class="">😉 <strong>이름</strong> </p><ul id="06df4669-3396-4c7e-b4f3-395133d3ae10" class="bulleted-list"><li style="list-style-type:disc">권민주(Minju Kwon)</li></ul><ul id="c0ddbeb9-eb6d-4724-9df8-bc80be2c98cb" class="bulleted-list"><li style="list-style-type:disc">權珉駐 </li></ul><p id="bdb6cace-6dbd-4c8a-b190-46ba01a24655" class="">
+</p><p id="79ae64bb-a7dc-4111-bdc5-2845527912b9" class="">🎂 <strong>생년월일</strong> </p><ul id="96dc3a1f-e8b5-4580-9827-f7422732f7eb" class="bulleted-list"><li style="list-style-type:disc">1997년 03월 03일 (26세)</li></ul><p id="8faeb454-8e30-4efc-98a9-7fb9fb51f038" class="">
+</p><p id="6ff11981-68eb-486c-ac27-42306f8376bf" class="">📲<strong> 연락처</strong></p><ul id="fdfbfe35-8bb1-4e80-9215-06333d071a07" class="bulleted-list"><li style="list-style-type:disc">010-XXXX-XXXX</li></ul><p id="0f54b6f0-3aca-446d-a013-d2d59118b85a" class="">
+</p></div><div id="70266358-ffb6-48f5-9086-252882c8e1f0" style="width:33.33333333333333%" class="column"><p id="b220fe11-0170-46ee-8495-7a9c41730148" class="">📧<strong> 이메일 </strong></p><ul id="cbb0e99a-2607-4481-bca7-6c41b49f3cf1" class="bulleted-list"><li style="list-style-type:disc">alswn656@naver.com</li></ul><ul id="240f58bf-39d3-46e9-a7f5-6bd0810c3b7f" class="bulleted-list"><li style="list-style-type:disc">alswn656@yonsei.ac.kr</li></ul><p id="ea4a7411-feb9-4845-9cb7-d3e4cfbeea00" class="">
+</p><p id="5d78d692-3289-4b78-ace7-269177992892" class="">📍<strong>주소</strong></p><ul id="51058668-488e-4c8f-9246-103aa85c0266" class="bulleted-list"><li style="list-style-type:disc">부산 </li></ul><p id="19a468bc-84b4-4a89-aec1-5721beb364dd" class="">
+</p></div></div><hr id="4bf22c2f-1fc4-414f-a387-5a50dfa79104"/><div id="5ac223ba-c32a-4c68-88d4-4bae5275c2c0" class="column-list"><div id="30efc241-43f1-45e6-a610-1b2216ae9bb0" style="width:100%" class="column"><h1 id="6c76e5e1-5fb5-40dd-9fa6-2c63b35f43bc" class="">🎓공부했어요 </h1><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3">동의대학교 공학사</summary><div class="indented"><p id="99622894-8020-4e8d-8c96-a1166d9b7060" class=""><strong>학과 </strong>인간시스템디자인공학과(UX, 인간공학) </p><p id="70bba396-3ab9-4dbf-be86-69b0f47dc089" class=""><strong>GPA</strong> 4.25/4.5 (2017-1,2학기 우등상 수상) </p><p id="46c4c420-b188-4551-89f7-ab20b6d51fc6" class=""><strong>연구실</strong> UX연구소 이재인 교수님 연구실</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3">연세대학교 UIC M.S 석사</summary><div class="indented"><p id="a725bac4-9bb7-49c6-b578-73e72611a09e" class=""><strong>학과</strong> Department of Innovation (HCI, UX) </p><p id="06727b53-151b-42e6-8c2c-0d0ce69cfb96" class=""><strong>GPA </strong>4.07/4.3</p><p id="13f5bc47-c0f8-425d-8eee-4edecebcb771" class=""><strong>연구실 </strong>DEY 강연아 교수님 연구실 </p><p id="e0fbc0f4-75ef-4979-b886-2bfd54baffab" class="">
+</p></div></details></div><div id="bc884555-64e9-438a-9bcc-cc2222885256" style="width:100%" class="column"><h1 id="be2dc5b6-d863-4dc2-b53f-de86dad5ef48" class="">🏆 상 받았어요</h1><ul id="d13d8699-2125-4034-8870-5209f6ba27f2" class="toggle"><li><details open=""><summary>2023.02 my SUNI SK Creative Challenge 2022: 메타버스를 활용한 사회문제 해결 아이디어의 사용자 경험 ⇒ 본선 발표 부분 장려상 </summary><p id="ed55a4a6-f641-4e7a-81b9-0aa604108691" class="">메타버스 UX 기획 본선 발표 부분: 몸과 마음을 건강하게 하는 커뮤니티형 헬스케어 메타버스 서비스 ‘US HEALTHY’ 프로젝트 장려상 수상</p><p id="8214febd-93e8-4ccb-ae78-9f0255bc02ed" class="">
+</p></details></li></ul><ul id="88b35fe2-03ae-476f-9115-3c0175d81939" class="bulleted-list"><li style="list-style-type:disc">2020.12 교내 2학기 캡스톤 디자인 우수상 </li></ul><ul id="b0edd4ad-87be-4898-a511-ceeefdc9d0c5" class="toggle"><li><details open=""><summary>2020.12 부산권역 B.SORI United Capstone Project 장려상, 특별상 </summary><ul id="281b016c-a24f-4cc7-b9a0-3ba221bcf0b4" class="bulleted-list"><li style="list-style-type:disc">부산 6개 대학이 참여하는 지역, 기업 문제 해결 프로그램 빗소리 프로젝트 경진대회 장려상, 특별상 (주제: 부산지역의 아이스팩 재활용 활성화 방안에 대한 서비스 개발)</li></ul></details></li></ul><ul id="ebcb7473-07be-4c2a-b353-4dcf9af56bf8" class="toggle"><li><details open=""><summary>2020.10 아이디어 난장대회 최우수상</summary><ul id="54a42d84-ad22-4f00-9137-188ae371fbd9" class="bulleted-list"><li style="list-style-type:disc"><strong>다리가 불편한 사용자를 위한 인간공학적인 레저용 목발 디자인 ‘WENCH’</strong></li></ul><figure id="227f20f4-8b04-4558-91c0-59f9ab1908f9" class="image"><a href="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/%25E1%2584%2586%25E1%2585%25A9%25E1%2586%25A8%25E1%2584%2587%25E1%2585%25A1%25E1%2586%25AF_%25E1%2584%2591%25E1%2585%25A1%25E1%2586%25AB%25E1%2584%2582%25E1%2585%25A6%25E1%2586%25AF_%25E1%2584%2583%25E1%2585%25B5%25E1%2584%258C%25E1%2585%25A1%25E1%2584%258B%25E1%2585%25B5%25E1%2586%25AB_%25E1%2584%258E%25E1%2585%25AC%25E1%2584%258C%25E1%2585%25A9%25E1%2586%25BC_%25E1%2584%258E%25E1%2585%25AE%25E1%2586%25AF%25E1%2584%2585%25E1%2585%25A7%25E1%2586%25A8__%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25A8%25E1%2584%2589%25E1%2585%25A1%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AB.jpg"><img style="width:8466px" src="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/%25E1%2584%2586%25E1%2585%25A9%25E1%2586%25A8%25E1%2584%2587%25E1%2585%25A1%25E1%2586%25AF_%25E1%2584%2591%25E1%2585%25A1%25E1%2586%25AB%25E1%2584%2582%25E1%2585%25A6%25E1%2586%25AF_%25E1%2584%2583%25E1%2585%25B5%25E1%2584%258C%25E1%2585%25A1%25E1%2584%258B%25E1%2585%25B5%25E1%2586%25AB_%25E1%2584%258E%25E1%2585%25AC%25E1%2584%258C%25E1%2585%25A9%25E1%2586%25BC_%25E1%2584%258E%25E1%2585%25AE%25E1%2586%25AF%25E1%2584%2585%25E1%2585%25A7%25E1%2586%25A8__%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25A8%25E1%2584%2589%25E1%2585%25A1%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AB.jpg"/></a></figure></details></li></ul><ul id="50029cbb-fe12-47e9-8624-bacd89955b16" class="toggle"><li><details open=""><summary>2020.07 교내 1학기 캡스톤 디자인 우수상 </summary><figure id="2939d264-7ec9-4295-86fc-266b110d566b" class="image"><a href="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/Slide_16_9_-_68.png"><img style="width:2881px" src="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/Slide_16_9_-_68.png"/></a></figure></details></li></ul><ul id="9fc52afc-9d00-47ed-80de-f117e625a792" class="toggle"><li><details open=""><summary>2019.09 한국 신발디자인 공모전 장려상 </summary><figure id="6a3b4ab1-0789-44ca-86ba-72f04f187603" class="image"><a href="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/Slide_16_9_-_87.png"><img style="width:2880px" src="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/Slide_16_9_-_87.png"/></a></figure><p id="5637ed51-e229-411a-bbdc-b3c9914c6389" class="">주제: 시각 장애인을 대상으로 디자인한 런닝화 ‘Signal’ </p></details></li></ul><ul id="c72990ba-1e5d-40d2-9ac2-7fad3b7ae3e2" class="toggle"><li><details open=""><summary>2017.06 교내 버스정류장 디자인 공모전 우수상 </summary></details></li></ul><p id="c03c8c5d-b98d-40c1-930e-afef7b0baeca" class="">
+</p></div></div><div id="22753695-7f3d-4e95-a0e3-44f9ecf1aa81" class="column-list"><div id="b8d84b17-840e-41bb-bad2-f4eb33243019" style="width:100%" class="column"><h1 id="ee45b309-49e5-4b66-ab8b-b736f558ae99" class="">🛠 툴 익혔어요 </h1><ul id="48ac4bbc-53a1-4ba1-8f69-533a1685b737" class="bulleted-list"><li style="list-style-type:disc"><strong>협업</strong></li></ul><ul id="4239b463-fe1d-4d3c-9f20-7fa94b425c93" class="bulleted-list"><li style="list-style-type:disc"><strong>커뮤니케이션</strong></li></ul><ul id="0da5e699-850d-44c4-9add-a9972853644e" class="bulleted-list"><li style="list-style-type:disc"><strong>UI 및 디자인: </strong>XD, 일러스트레이터, 포토샵, Figma, 라이노, 프리미어 프로(영상편집) </li></ul><ul id="50bf7697-2c68-4d70-a696-5c8f8c30975a" class="bulleted-list"><li style="list-style-type:disc"><strong>UX리서치:</strong></li></ul><p id="dbd42597-135e-4608-965d-a56066f38f74" class="">Focus group, Field study, Observation, Interview, Interview Coding, Survey, Journey map, Persona/Scenario</p><ul id="6acc9366-f164-447d-99de-11533c5f6b71" class="bulleted-list"><li style="list-style-type:disc"><strong>UX분석:</strong> Affinity diagraming</li></ul><ul id="f51cbfc9-e45d-491d-a748-f32040f305cd" class="bulleted-list"><li style="list-style-type:disc"><strong>데이터 분석 및 시각화:</strong> R, Python, SPSS</li></ul><ul id="3a6f03e1-7c7d-4046-b28f-da23b9243d0d" class="bulleted-list"><li style="list-style-type:disc"><strong>유저 테스팅:</strong> A/B Testing, Usability Testing</li></ul><p id="2f99ff9d-6969-4932-9741-94ff5e4fd85e" class="">
+</p></div><div id="ee7136ee-992e-4c62-bf18-a7cd60a09d0a" style="width:100%" class="column"><h1 id="12635f33-8452-476d-ac46-dc5282d1a14b" class="">🏅 대외활동/수료 받았어요 </h1><ul id="dc2482d3-906b-49f1-94a3-7d53a9dba171" class="bulleted-list"><li style="list-style-type:disc">2022.08~2023.01 SK 텔레콤 에이닷 UX자문단 수료증 </li></ul><ul id="5b03b023-0d55-42a9-9efc-372185b74df9" class="bulleted-list"><li style="list-style-type:disc">2022.09~2022.12 SK my SUNI, 대한사용자경험전문가협회 주관, 메타버스 UX기획 과정 수료증 </li></ul><ul id="0d2f6dcd-1538-4770-8aaa-fd81ece49555" class="toggle"><li><details open=""><summary>2022.08 ICONS 융합 아카데미 수료증</summary><ul id="57e08c55-d97e-4b2a-9596-abf32c2f8d9f" class="bulleted-list"><li style="list-style-type:disc">융합 연구 팀 &amp; 개인 프로젝트 진행,
+융합 연구 이론 및 디자인 과정 교육: 다문화 가정의 AR 구강 교육 서비스</li></ul></details></li></ul><ul id="f7b16f2b-a84c-4b4a-81dd-7e5984b31e19" class="toggle"><li><details open=""><summary>2020.9~2020.11 KT&amp;G 상상유니브 부산 상상프렌즈 11기 수료증  </summary><ul id="633fefa4-14c4-4f33-9f7f-24dcaa6cf576" class="bulleted-list"><li style="list-style-type:disc">대학생 프로그램 기획, 집현전 프로그램 홍보 카드뉴스 제작, 상상 톡톡 인생 선배의 토크쇼 기획 및 영상 촬영과 썸네일 제작 및 편집 (총 22화</li></ul></details></li></ul><ul id="1db95b23-abbd-4e3c-b9d4-a6e81f3494c7" class="toggle"><li><details open=""><summary>2019.09~2019.10 어쓰 봉사 동아리</summary><ul id="d0b73101-3518-4a1e-8629-6005c5cdbb18" class="bulleted-list"><li style="list-style-type:disc">건강백세, 어울림 한마당 등 어르신들의 스마트폰, 스마트폰 기기 사용의 사용법을 안내해주는 봉사활동 진행</li></ul></details></li></ul><ul id="d972c21f-55d1-4ce0-a5a0-f0ce37a85140" class="bulleted-list"><li style="list-style-type:disc">2016.12~2017.06 부산 청년 벽화 봉사단</li></ul><p id="1d3fb77e-38fe-42ab-871f-c21f88257036" class="">
+</p><p id="ee140e30-723d-4d53-a93b-f48164b8c417" class="">
+</p><p id="dedf2a9c-d939-4eb3-8153-8c3d0bfbe94b" class="">
+</p><p id="a7605d7e-b0d8-47db-9a8a-fc51b1578f76" class="">
+</p></div></div><div id="3aaee2dc-41a1-42fb-b379-e6f2d88086d9" class="column-list"><div id="f0112b20-fffc-4709-8d1a-01be383b5179" style="width:100%" class="column"><h1 id="f87c4a3c-2323-4a68-8d25-2ea373594e49" class="">📚 논문 제출했어요 </h1><ul id="4907c0d2-efda-4994-b7a5-642ead1ac2d2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>석사 졸업논문(영문작성):</strong></mark> A study on the development of metaverse service user experience evaluation tool; Focusing on SNS platform</li></ul><ol type="1" id="8b602295-acd8-4694-be27-6ff5b6b4fdb1" class="numbered-list" start="1"><li>권민주, 조나연, 이재인. (2021). 포털 실시간 검색어 영향력이 사용자에게 미치는 영향 연구. 대한인간공학회 학술대회논문집, (), 281-282.</li></ol><ol type="1" id="995d14e3-0d17-4ba7-b9bb-fb2388a98620" class="numbered-list" start="2"><li>권민주, 강근혜, 조나연, 이재인. (2020). 온택트시대에 맞춘 새로운 지역방송 플랫폼 서비스 연구. 대한인간공학회 학술대회논문집, (), 253-253.</li></ol><ol type="1" id="2edad78d-f283-4d18-85d1-683313b2de94" class="numbered-list" start="3"><li>조혜민, 권민주, 이재인. (2019). 편의점 결제 시스템 사용에 대한 연구. 대한인간공학회 학술대회논문집, (), 219-219.</li></ol><ol type="1" id="802627d9-3406-4f8c-86e4-6a71050e7a67" class="numbered-list" start="4"><li>김민주, 이소미, 권민주, 이재인. (2019). 로봇청소기 중심으로 한 IoT 애플리케이션의 사용에 관한 연구. 대한인간공학회 학술대회논문집, (), 192-193.</li></ol><ol type="1" id="ce646d41-716a-4b43-bd48-69ce5ec19678" class="numbered-list" start="5"><li>권민주, 박소현, 이재인. (2019). 전통시장 및 관광 활성화를 위한 서비스 : 나들길. 대한인간공학회 학술대회논문집, (), 37-37.</li></ol><ol type="1" id="8c179149-a708-4121-994f-c8a5ba9ee190" class="numbered-list" start="6"><li>권민주, 박소현, 이재인. (2018). 부산 지하철 승차권 자동발매기 시스템 UI 사용성에 관한 연구. 대한인간공학회 학술대회논문집, (), 441-441.</li></ol><ol type="1" id="8d83aacb-c5b7-4f4f-bc80-3c1ad69ed0e9" class="numbered-list" start="7"><li>정경진, 최주연, 권민주, &amp; 강연아. (2022). 로봇 공기청정기 “에어봇” 의 자동화 시스템 디자인 연구: 자동화 시스템의 사용성에 대한 질적 연구를 중심으로. 한국 HCI 학회 학술대회, 448-456. (인터뷰 설계 및 인터뷰, 데이터 분석 및 인사이트 도출)</li></ol><ol type="1" id="2d7180df-a2e8-40c9-9bbd-c0ba5be8d3bf" class="numbered-list" start="8"><li>권민주, 강연아. (2022). SNS 기반 메타버스 플랫폼의 윤리적 문제에 관한 연구. 한국디자인학회 학술발표대회 논문집, (), 162-163.</li></ol><p id="706a19b4-e3b2-422c-9c81-8ff4cfbbd3f4" class="">
+</p></div><div id="7c0f220f-bfe1-4875-9890-5b7b76e5f999" style="width:100%" class="column"><h1 id="99eedd1f-3a2f-4fd4-b6ed-9727f3ecb95c" class="">✏️ 자격증 땄어요! </h1><ul id="faa83cda-63d9-4778-90d8-9504f5ad0b69" class="bulleted-list"><li style="list-style-type:disc">2022.09 ADsP(데이터분석준전문가)  </li></ul><ul id="82808965-8c8c-407d-b36a-4687a7d315bf" class="bulleted-list"><li style="list-style-type:disc">2021.10 인간공학기사</li></ul><ul id="1448519c-b8a4-422b-8a59-47899420427a" class="bulleted-list"><li style="list-style-type:disc">2021.08 GAIQ </li></ul><ul id="ee16fc37-2ff2-496a-be41-9d07ac3c4dc2" class="bulleted-list"><li style="list-style-type:disc">2021.07 컴퓨터활용능력 2급</li></ul><ul id="d01f63e6-8982-44a7-8c28-0e7dfc4ce659" class="bulleted-list"><li style="list-style-type:disc">2019.11 운전면허 2종보통 </li></ul><ul id="60f33ffc-e503-4ab8-bcce-ce6999c3a7c8" class="bulleted-list"><li style="list-style-type:disc">2019.10 컴퓨터 그래픽스 운용기능사 </li></ul><p id="20da2506-6e94-4e75-9161-92b66d8e509f" class="">
+</p><p id="7ac3ae7d-3741-42a5-840f-fc2bd160a24d" class="">
+</p><p id="4aee9249-6010-4c49-8c21-46e0082548e8" class="">
+</p><h1 id="dc0fecf3-4b5c-40cf-a9bc-271693663a9a" class="">🇨🇳 어학연수 다녀왔어요</h1><ul id="92bb7855-027b-4658-8e82-a5b2b3dda35b" class="bulleted-list"><li style="list-style-type:disc">2017.12~2018.01 중국 상해장녕과기대학 어학연수 (중국어 교육, 문화체험, 기업탐방) </li></ul><p id="2cfa9ca9-5157-42ff-86b4-c12f31456595" class="">
+</p><p id="1404a36d-631c-4c0b-99d3-e71cde583fd6" class="">
+</p><p id="f4eb222e-498e-4357-8074-a6015488aa56" class="">
+</p><h1 id="52f9b26d-f4ff-41b2-babf-ca2d5c9531b5" class="">👩‍💻 기업 프로젝트 했어요! (경력사항)</h1><ul id="133a2790-dab5-4f5d-91bf-7e29c193178f" class="toggle"><li><details open=""><summary>2021.03~2023.02(약 2년): <mark class="highlight-red"><span style="border-bottom:0.05em solid">연세대학교 산학협력단 소속</span></mark> 연구원 / <strong>산업기술혁신사업 디케이(주)/음파 및 클린 플라즈마 기술을 활용한 스마트 공기청정시스템(에어봇-에어블럭) 서비타이제이션 및 디자인개발 → ‘Project Manager’</strong></summary><ul id="ae86fa4c-9f99-4fdd-83bc-860f40a0ebcb" class="bulleted-list"><li style="list-style-type:disc">역할: PM, 행정업무, Researcher and UX/UI Design</li></ul><ul id="03a6e264-2d03-4bc8-b850-d76210f4a789" class="bulleted-list"><li style="list-style-type:disc">업무기간: 2021.03-2023.03 (2년)</li></ul><ul id="743aaa7b-b8f1-4268-a0b3-a33c6181042d" class="bulleted-list"><li style="list-style-type:disc">사용 Tool: Photoshop / Illustrator / Figma / PPT / 유니티 + VR</li></ul><ul id="17edee1b-3964-4050-8cc3-daf349635407" class="bulleted-list"><li style="list-style-type:disc">상세내용:</li></ul><ol type="1" id="1244c3a9-5d54-489b-b05c-495da24950bc" class="numbered-list" start="1"><li>스마트 이동형 로봇 공기청정기 사용자 분석 및 리빙랩 실험(모집, 설문조사, 인터뷰, 관찰조사, 유저 다이어리, 유저 시나리오 작성)</li></ol><ol type="1" id="5c31013c-19e3-47c1-a49a-c79a081308b9" class="numbered-list" start="2"><li>공청기 트렌드 조사, 퍼소나 기반 유저 시나리오, 시장조사 및 사용자 조사, 서비스기획, UIUX디자인</li></ol><ol type="1" id="e994efc9-2c64-44c4-a5aa-7118a7c08678" class="numbered-list" start="3"><li>스마트 공기청정기의 사용 행태 설문조사 및 데이터 분석 (20-40대, 107명 대상)</li></ol><ol type="1" id="6041e2c0-6ec0-4d96-8ca0-15431755b842" class="numbered-list" start="4"><li><strong>논문 출판:</strong> 정경진, 최주연, 권민주, &amp; 강연아. (2022). 로봇 공기청정기 “에어봇” 의 자동화 시스템 디자인 연구: 자동화 시스템의 사용성에 대한 질적 연구를 중심으로. <em>한국 HCI 학회 학술대회</em>, 448-456. (인터뷰 설계 및 인터뷰, 데이터 분석 및 인사이트 도출)</li></ol><ol type="1" id="fb35e423-473a-4da9-bd06-3611b65b13cd" class="numbered-list" start="5"><li>스마트 이동형 로봇 공기청정기 모바일 서비스 IA제작, UI설계 및 프로토타이핑 후 사용자 평가, 전문가 평가, 데이터 분석</li></ol><ol type="1" id="6465b8ef-7783-4e1f-ab7b-8a0af9f80705" class="numbered-list" start="6"><li>VR환경을 통한 디바이스 사용성 평가 (개발자와 협업) – 모집, 설문, 인터뷰, 실험, 데이터 분석</li></ol><ol type="1" id="efe57008-1943-49c0-8630-17ad0ffbb495" class="numbered-list" start="7"><li>프로젝트 PM 총괄(기획, 업무 로드랩 전략, 일정관리) 및 행정업무</li></ol><p id="542fdcf1-e20a-4f68-a101-272dbc75747f" class="">
+</p></details></li></ul><ul id="b380eb85-b449-4f65-b226-63551aba2340" class="toggle"><li><details open=""><summary>2022.03~2022.11: <mark class="highlight-red"><span style="border-bottom:0.05em solid">고려대학교 산학협력단 소속</span></mark> 연구원 / <strong>LG전자 - 에어솔루션 제품의 사용자 관점 3F 품질 개선 → ‘UXUI Designer’</strong></summary><ul id="e4850e12-52a8-4178-9939-c9b5827870f7" class="bulleted-list"><li style="list-style-type:disc">업무기간: 2022.03-2022.11 (9개월)</li></ul><ul id="711b1099-9dfc-448b-b87e-c6f91584264e" class="bulleted-list"><li style="list-style-type:disc">사용 Tool: Photoshop / Illustrator / Figma / PPT</li></ul><ul id="3de7ab57-78e1-4c2c-8847-77fab2181843" class="bulleted-list"><li style="list-style-type:disc"><strong>상세내용</strong></li></ul><ul id="058ae417-2939-4272-869a-501780d38ae8" class="bulleted-list"><li style="list-style-type:disc">LG전자 제품 User research, Market 분석 및 UX평가 및 개선안 도출(에어로타워, thinQ APP, TMS웹/앱 UX, 에어컨 무선 리모컨 중심)</li></ul><ul id="b9bf9e4d-81d7-44ee-9ff2-d6fab96587b8" class="bulleted-list"><li style="list-style-type:disc">LG thin Q APP 시장 및 경쟁사 분석, 사용자 조사(VoC, 모집 및 설문조사, 인터뷰, 사용성 평가)</li></ul><ul id="9f04c7a1-b695-4c0b-a370-30e23e333aee" class="bulleted-list"><li style="list-style-type:disc">대표 공기청정기 실사용 Scene 고려한 UX Framework 개발 및 진단결과 도출, ThinQ App평가 체크리스트 개발</li></ul><ul id="d54fd8c5-26a2-4fbb-8dcb-1af44f7042f4" class="bulleted-list"><li style="list-style-type:disc">LG ThinQ APP, TMS APP, Web, 에어로타워 디스플레이 UX/UI 개선 및 디자인</li></ul><ul id="32c3091b-a90d-47e8-9cfd-a120a03090f8" class="bulleted-list"><li style="list-style-type:disc">기타 시각화 작업 </li></ul></details></li></ul><ul id="f6921be0-6b02-43b4-b0a1-cdf0d7822677" class="toggle"><li><details open=""><summary>2020.03~2020.10: <mark class="highlight-red"><span style="border-bottom:0.05em solid">동의대학교 산학협력단 소속</span></mark> 연구원 / <strong>LG전자 - 에어솔루션 제품의 사용자 관점 3F 품질 개선 → ‘UXUI Designer’ </strong></summary><ul id="d6e3ccc8-e341-4d97-b2a2-ac23c063e8ee" class="bulleted-list"><li style="list-style-type:disc">업무기간: 2020.03-2020.10 (8개월)</li></ul><ul id="c9f8c020-f12d-4d5c-8528-82711f4916b2" class="bulleted-list"><li style="list-style-type:disc">사용 Tool: Photoshop / Illustrator / PPT</li></ul><ul id="99b7618d-94bd-4ef0-a272-e38bd9ad1493" class="bulleted-list"><li style="list-style-type:disc">상세내용:</li></ul><ul id="4e6eded1-9f94-45ab-a1fb-4493564ddb55" class="bulleted-list"><li style="list-style-type:disc">LG 퓨리케어 제품 디스플레이 개선 및 프로토타이핑</li></ul><ul id="20a1f70c-a537-4733-b716-a7433a4d5e4c" class="bulleted-list"><li style="list-style-type:disc">VoC, 모집 및 설문조사, 인터뷰, UX Framework 개발 </li></ul><ul id="035d4385-645c-418c-9d02-c57795e4d2d2" class="bulleted-list"><li style="list-style-type:disc">LG 퓨리케어 시장 분석 및 사용자 조사(VoC), 전문가 평가</li></ul><ul id="9a7f8572-f15f-45c5-a423-09923818b324" class="bulleted-list"><li style="list-style-type:disc">LG 에어솔루션 제품 무선 리모컨 UX개선안 제시 및 프로토타이핑 → 결과물 제품화 및 대한인간공학 디자인상 수상 </li></ul></details></li></ul><p id="3f36b576-cdb9-4a47-bb13-e3c817ec0738" class="">
+</p></div></div><h1 id="d19c8124-e7da-47a1-95f5-5fa2442eb9ec" class="">🎖 특허 냈어요</h1><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3"><strong>스마트 재활용 수거기 (캡스톤 프로젝트 결과물) </strong></summary><div class="indented"><p id="c9c333a0-cea8-4ef6-a107-a4f8ea1d6939" class=""><strong>출원번호: </strong>10-2021-0013114 / <strong>발행일:</strong> 2022년 6월 27일 </p><p id="cc864641-21a9-469b-836c-fae707823495" class=""><strong>요약:</strong> 본 발명은 스마트 재활용 수거기에 관한 것으로, 상세하게는 내부에 중공부가 형성되는 프레임부, 프레임부의 상부에 형성되는 인식부, 프레임부 내부에 형성되되, 유입되는 물체의 유무에 따라 개폐되는 거치부, 거치부와 수직방향으로 일정간격 이격되되, 물체가 안착되는 보관부, 거치부에 형성되는 무게측정부, 프레임부의 내측면에 형성되는 센서부 및 인식부, 거치부 및 센서부와 연동되는 제어부를 포함하고, 거치부에 물체가 유입되는 경우, 무게측정부와 센서부는 상기 물체의 개수 및 무게를 측정한다.</p></div></details><figure id="3a6476f8-62e8-40fd-adb8-b3ef1e9d093e"><div class="source"><a href="Minju%20Kwon%20efe82c69c369484e8c6ceb277343a37b/%25E1%2584%2590%25E1%2585%25B3%25E1%2586%25A8%25E1%2584%2592%25E1%2585%25A5_%25E1%2584%2589%25E1%2585%25B3%25E1%2584%2586%25E1%2585%25A1%25E1%2584%2590%25E1%2585%25B3_%25E1%2584%258C%25E1%2585%25A2%25E1%2584%2592%25E1%2585%25AA%25E1%2586%25AF%25E1%2584%258B%25E1%2585%25AD%25E1%2586%25BC_%25E1%2584%2589%25E1%2585%25AE%25E1%2584%2580%25E1%2585%25A5%25E1%2584%2580%25E1%2585%25B5.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df12847e-0efa-489a-98b3-fec1d051a2b7/%E1%84%90%E1%85%B3%E1%86%A8%E1%84%92%E1%85%A5_%E1%84%89%E1%85%B3%E1%84%86%E1%85%A1%E1%84%90%E1%85%B3_%E1%84%8C%E1%85%A2%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%89%E1%85%AE%E1%84%80%E1%85%A5%E1%84%80%E1%85%B5.pdf</a></div></figure><p id="fd9f023a-93da-4cab-a6a6-cf88ecc35ef0" class="">
+</p><p id="a6c712e4-e8f5-4f29-8a76-3c57f876e4aa" class="">
+</p><p id="0ee7b255-5f74-4bd9-94d7-cb53615fa4c8" class="">
+</p></div></article></body></html>
